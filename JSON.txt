@@ -1,0 +1,8 @@
+function reqListener () {
+  console.log(this.responseText);
+}
+
+var ourRequest=new XMLHttpRequest();
+ourRequest.addEventListener("load", reqListener);
+ourRequest.open('GET','https://learnwebcode.github.io/json-example/animals-1.json');
+ourRequest.send();
